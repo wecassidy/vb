@@ -1,5 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{vb}
+\ProvidesClass{vb}
+
+% Load base (article)
+\LoadClass[12pt,letterpaper]{article}
 
 % Margins
 \RequirePackage[margin=2.54cm]{geometry}

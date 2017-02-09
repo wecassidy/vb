@@ -1,8 +1,6 @@
-# vb.sty
+# vb.cls
 
-A LaTeX package implementing [VB's style requirements](http://www.hmvb.org/apclf.doc).
-
-
+A LaTeX document class implementing [VB's style requirements](http://www.hmvb.org/apclf.doc).
 
 # Format
 

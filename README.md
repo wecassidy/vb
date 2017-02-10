@@ -20,6 +20,16 @@ A LaTeX document class implementing [VB's style requirements](http://www.hmvb.or
   - Even pages: author
   - Odd pages: title (title cased)
 - Page numbers in headers, book style (left on even pages, right on odd pages)
+- Sections
+  1. Title page
+  2. Abstract
+  3. Theory
+  4. Method
+  5. Data
+  6. Analysis
+  7. Sources of error
+  8. Conclusion
+  9. Sources
 
 ## Title page
 

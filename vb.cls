@@ -7,6 +7,10 @@
 %% Margins
 \RequirePackage[margin=2.54cm]{geometry}
 
+%% Font
+\renewcommand*\rmdefault{ptm} % Use times as serif font
+\renewcommand{\familydefault}{\rmdefault} % Set default font to serif
+
 %% Title page
 
 
@@ -15,7 +19,8 @@
 
 %% Header
 \RequirePackage{fancyhdr}
-\pagestyle{fancy}
+\pagestyle{fancy} % Show the header on every page
+\renewcommand{\headrulewidth}{0pt} % No line between the header and text
 \fancyhead[EC]{\textit{\@author et al}}
 \fancyhead[OC]{\textit{\@title}}
 

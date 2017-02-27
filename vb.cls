@@ -12,7 +12,29 @@
 \renewcommand{\familydefault}{\rmdefault} % Set default font to serif
 
 %% Title page
+\RequirePackage{etoolbox} % LaTeX programmy-ish tricks
+\newcommand*{\labauthor}[2]{
+  \listadd{\labauthorslist}{
+    \textsc{#1}
 
+    {\fontsize{9pt}{13.5pt}\selectfont\textit{#2}}
+
+  }
+}
+\renewcommand*{\do}[1]{
+  #1
+}
+\newcommand*{\@labauthors}{\dolistloop{\labauthorslist}}
+
+\renewcommand*{\maketitle}{%
+  {
+    \centering
+    {\fontsize{20pt}{30pt}\selectfont\@title} % 20pt
+
+    \@labauthors
+
+  }
+}
 
 %% 2 columns
 \RequirePackage{multicol}

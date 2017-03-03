@@ -38,6 +38,11 @@
 
 %% 2 columns
 \RequirePackage{multicol}
+\setlength\columnsep{1.27cm}
+
+%% Single space
+\RequirePackage{setspace}
+\singlespacing
 
 %% Header
 \RequirePackage{fancyhdr}
@@ -69,5 +74,26 @@
     error bars/error bar style={color=black}
   }}
 
+%% Abstract
+\newenvironment{vb_abstract}{
+  \begin{quotation}
+    \fontsize{9pt}{13.5}\selectfont
+  }{
+  \end{quotation}
+}
+
+%% Equations
+\RequirePackage{amsmath}
+\RequirePackage{mathtools}
+\newtagform{brackets}{[}{]} % Wrap numbers in square brackets
+\usetagform{brackets}
+
+\newenvironment{vb_equation}[2]{
+  \begin{equation}
+  }{
+  \end{equation}
+  {\raggedright \textit{\fontsize{9pt}{13.5}\selectfont #1}}
+  %{\fontsize{}}
+}
 
 \endinput

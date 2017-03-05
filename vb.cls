@@ -85,15 +85,25 @@
 %% Equations
 \RequirePackage{amsmath}
 \RequirePackage{mathtools}
+\RequirePackage{xifthen}
 \newtagform{brackets}{[}{]} % Wrap numbers in square brackets
 \usetagform{brackets}
-
 \newenvironment{vb_equation}[2]{
+  \begin{samepage}
   \begin{equation}
   }{
   \end{equation}
-  {\raggedright \textit{\fontsize{9pt}{13.5}\selectfont #1}}
-  %{\fontsize{}}
+  \vspace{3mm}
+  \begin{flushright} % Citation
+    \textit{
+      \ifthenelse{\isempty{#1}}{}{(#1)} % Only display a citation if
+                                % the argument exists
+    }
+  \end{flushright}
+
+  \vspace{-3mm}Where: #1\vspace{3mm}
+  \end{samepage}
 }
+
 
 \endinput
